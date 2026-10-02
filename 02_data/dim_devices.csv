@@ -1,0 +1,11 @@
+device_id,device_name,operating_system,device_category
+1,Android Phone,Android,Mobile
+2,iPhone,iOS,Mobile
+3,Android Tablet,Android,Tablet
+4,iPad,iPadOS,Tablet
+5,Windows Laptop,Windows,Laptop
+6,MacBook,macOS,Laptop
+7,Smart TV,Android TV,TV
+8,Apple TV,tvOS,TV
+9,Chromecast,Android TV,Streaming Device
+10,Web Browser,Browser,Web

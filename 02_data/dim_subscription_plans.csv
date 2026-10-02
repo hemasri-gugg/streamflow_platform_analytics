@@ -1,0 +1,7 @@
+plan_id,plan_name,billing_cycle,monthly_price,max_devices,video_quality,ads_enabled,offline_download,plan_status
+1,Mobile Monthly,Monthly,149,1,HD,True,False,Active
+2,Basic Monthly,Monthly,299,2,Full HD,False,True,Active
+3,Standard Monthly,Monthly,499,4,4K,False,True,Active
+4,Premium Monthly,Monthly,799,6,4K,False,True,Active
+5,Standard Annual,Annual,449,4,4K,False,True,Active
+6,Premium Annual,Annual,699,6,4K,False,True,Active

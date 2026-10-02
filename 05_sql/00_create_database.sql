@@ -1,0 +1,3 @@
+CREATE DATABASE streamflow_platform_analytics;
+SHOW DATABASES;
+USE streamflow_platform_analytics;
