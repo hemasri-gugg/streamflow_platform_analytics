@@ -7,7 +7,6 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-Cloud-orange)
 ![SQL](https://img.shields.io/badge/SQL-Analytics-green)
-![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811)
 ![GitHub](https://img.shields.io/badge/GitHub-Version_Control-black)
 ![Status](https://img.shields.io/badge/Status-In_Development-success)
 
@@ -170,7 +169,7 @@ Although StreamFlow is fictional, the architecture, workflows, analytical method
           Business SQL Analytics
                      │
                      ▼
-        Power BI Executive Dashboards
+           Executive Dashboards
                      │
                      ▼
       Data-Driven Business Decisions
@@ -186,7 +185,7 @@ Although StreamFlow is fictional, the architecture, workflows, analytical method
 | Data Processing | Pandas, NumPy |
 | Cloud Data Warehouse | Google BigQuery |
 | Database | BigQuery SQL, MySQL |
-| Business Intelligence | Power BI |
+| Business Intelligence | UI based Dashboards|
 | Version Control | Git & GitHub |
 | Documentation | Markdown |
 
@@ -246,7 +245,7 @@ Star Schema Design
 SQL Business Analytics
           │
           ▼
-Power BI Dashboards
+Dashboards
           │
           ▼
 Business Insights
@@ -374,7 +373,6 @@ StreamFlow-Platform-Analytics/
 │   ├── marketing_analytics.sql
 │   └── support_analytics.sql
 │
-├── powerbi/
 │
 ├── dashboards/
 │
@@ -400,7 +398,7 @@ StreamFlow-Platform-Analytics/
 | Data Validation | ✅ Completed |
 | Google BigQuery Implementation | ✅ Completed |
 | SQL Analytics | ✅ Completed |
-| Power BI Dashboard Development | 🚧 In Progress |
+| Dashboards | ✅ Completed |
 | Documentation | 🚧 In Progress |
 
 ---
