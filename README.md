@@ -359,30 +359,39 @@ Although developed as a portfolio project, the overall analytical workflow close
 ```text
 StreamFlow-Platform-Analytics/
 │
-├── datasets/
 │
-├── python/
-│   ├── data_generation/
-│   ├── validation/
-│   └── utilities/
+├─ 01_docs/
 │
-├── sql/
-│   ├── customer_analytics.sql
-│   ├── revenue_analytics.sql
-│   ├── content_analytics.sql
-│   ├── marketing_analytics.sql
-│   └── support_analytics.sql
+├─ 02_datasets/
 │
+├─ 03_python/
+│   ├─ data_generation/
+│   ├─ validation/
+│   └─ utilities/
 │
-├── dashboards/
+├─ 04_bigquery/
+│   ├─ customer_analytics.sql
+│   ├─ revenue_analytics.sql
+│   ├─ content_analytics.sql
+│   ├─ marketing_analytics.sql
+│   └─ support_analytics.sql
 │
-├── docs/
+├ 04_bigquery/
+│   ├─ customer_analytics.sql
+│   ├─ revenue_analytics.sql
+│   ├─ content_analytics.sql
+│   ├─ marketing_analytics.sql
+│   └─ support_analytics.sql
 │
-├── images/
+├─ 06_dashboards/
 │
-├── README.md
+├─ 07_reports
 │
-└── LICENSE
+├─ LICENSE
+│
+├─ README.md
+│
+└─ LICENSE
 ```
 
 ---
