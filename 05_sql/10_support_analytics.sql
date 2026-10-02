@@ -52,7 +52,7 @@ FROM fact_support_tickets;
 #Query 8: CSAT by Issue Category#
 SELECT
     issue_category,
-    ROUND(AVG(customer_satisfaction_score),2) AS avg_csat_score
+    ROUND(AVG(customer_satisfaction),2) AS avg_csat_score
 FROM fact_support_tickets
 GROUP BY issue_category
 ORDER BY avg_csat_score DESC;
