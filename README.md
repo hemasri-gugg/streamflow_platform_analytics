@@ -391,7 +391,7 @@ StreamFlow-Platform-Analytics/
 │
 ├─ README.md
 │
-└─ LICENSE
+└─ requirements.txt
 ```
 
 ---
