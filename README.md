@@ -210,10 +210,8 @@ The warehouse consists of multiple fact and dimension tables designed to optimiz
 - Customers
 - Subscription Plans
 - Content
-- Time
 - Geography
 - Campaigns
-- Support Agents
 
 This architecture provides a scalable foundation for Business Intelligence reporting while supporting efficient analytical queries across multiple business domains.
 
@@ -359,7 +357,7 @@ Although developed as a portfolio project, the overall analytical workflow close
 ```text
 StreamFlow-Platform-Analytics/
 │
-├─ 00_website/
+├─ index.html
 │
 ├─ 01_docs/
 │
@@ -377,16 +375,12 @@ StreamFlow-Platform-Analytics/
 │   ├─ marketing_analytics.sql
 │   └─ support_analytics.sql
 │
-├ 04_bigquery/
+├ 04_sql/
 │   ├─ customer_analytics.sql
 │   ├─ revenue_analytics.sql
 │   ├─ content_analytics.sql
 │   ├─ marketing_analytics.sql
 │   └─ support_analytics.sql
-│
-├─ 06_dashboards/
-│
-├─ 07_reports
 │
 ├─ LICENSE
 │
@@ -409,7 +403,7 @@ StreamFlow-Platform-Analytics/
 | Google BigQuery Implementation | ✅ Completed |
 | SQL Analytics | ✅ Completed |
 | Dashboards | ✅ Completed |
-| Documentation | 🚧 In Progress |
+| Insights Documentation | ✅ Completed |
 
 ---
 
