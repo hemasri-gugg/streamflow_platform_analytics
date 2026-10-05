@@ -359,6 +359,7 @@ Although developed as a portfolio project, the overall analytical workflow close
 ```text
 StreamFlow-Platform-Analytics/
 │
+├─ 00_website/
 │
 ├─ 01_docs/
 │
