@@ -210,12 +210,195 @@ The warehouse consists of multiple fact and dimension tables designed to optimiz
 - Customers
 - Subscription Plans
 - Content
-- Geography
+- Devices
 - Campaigns
 
 This architecture provides a scalable foundation for Business Intelligence reporting while supporting efficient analytical queries across multiple business domains.
 
-> **📌 ER Diagram / Star Schema:** *(Add diagram here)*
+> **📌 ER Diagram / Star Schema:**
+```mermaid
+erDiagram
+    GEOGRAPHY ||--o{ CUSTOMER : groups
+    CUSTOMER ||--o{ SUBSCRIPTION : has
+    SUBSCRIPTION_PLAN ||--o{ SUBSCRIPTION : defines
+    CUSTOMER ||--o{ PAYMENT : makes
+    SUBSCRIPTION o|--o{ PAYMENT : relates_to
+    CUSTOMER ||--o{ WATCH_HISTORY : creates
+    CONTENT ||--o{ WATCH_HISTORY : appears_in
+    CUSTOMER ||--o{ CAMPAIGN_RESPONSE : receives
+    MARKETING_CAMPAIGN ||--o{ CAMPAIGN_RESPONSE : records
+    CUSTOMER ||--o{ SUPPORT_TICKET : raises
+    SUPPORT_AGENT o|--o{ SUPPORT_TICKET : handles
+
+    GEOGRAPHY {
+        int geography_id PK
+        string country
+        string region
+    }
+    CUSTOMER {
+        int customer_id PK
+        int geography_id FK
+        date signup_date
+        string acquisition_channel
+    }
+    SUBSCRIPTION_PLAN {
+        int plan_id PK
+        string plan_name
+        decimal plan_price
+        string billing_period
+    }
+    SUBSCRIPTION {
+        int subscription_id PK
+        int customer_id FK
+        int plan_id FK
+        date start_date
+        date end_date
+        string subscription_status
+    }
+    PAYMENT {
+        int payment_id PK
+        int customer_id FK
+        int subscription_id FK
+        date payment_date
+        decimal amount
+        string payment_status
+    }
+    CONTENT {
+        int content_id PK
+        string title
+        string content_type
+        string genre
+        int duration_minutes
+    }
+    WATCH_HISTORY {
+        int watch_id PK
+        int customer_id FK
+        int content_id FK
+        datetime watch_start
+        int watch_duration_minutes
+        string device_type
+    }
+    MARKETING_CAMPAIGN {
+        int campaign_id PK
+        string campaign_name
+        string channel
+        decimal campaign_cost
+    }
+    CAMPAIGN_RESPONSE {
+        int response_id PK
+        int campaign_id FK
+        int customer_id FK
+        date response_date
+        string response_type
+        boolean converted
+    }
+    SUPPORT_AGENT {
+        int agent_id PK
+        string agent_name
+        string team
+    }
+    SUPPORT_TICKET {
+        int ticket_id PK
+        int customer_id FK
+        int agent_id FK
+        date created_date
+        date resolved_date
+        string issue_category
+        string ticket_status
+        string priority
+    }
+``````mermaid
+erDiagram
+    GEOGRAPHY ||--o{ CUSTOMER : groups
+    CUSTOMER ||--o{ SUBSCRIPTION : has
+    SUBSCRIPTION_PLAN ||--o{ SUBSCRIPTION : defines
+    CUSTOMER ||--o{ PAYMENT : makes
+    SUBSCRIPTION o|--o{ PAYMENT : relates_to
+    CUSTOMER ||--o{ WATCH_HISTORY : creates
+    CONTENT ||--o{ WATCH_HISTORY : appears_in
+    CUSTOMER ||--o{ CAMPAIGN_RESPONSE : receives
+    MARKETING_CAMPAIGN ||--o{ CAMPAIGN_RESPONSE : records
+    CUSTOMER ||--o{ SUPPORT_TICKET : raises
+    SUPPORT_AGENT o|--o{ SUPPORT_TICKET : handles
+
+    GEOGRAPHY {
+        int geography_id PK
+        string country
+        string region
+    }
+    CUSTOMER {
+        int customer_id PK
+        int geography_id FK
+        date signup_date
+        string acquisition_channel
+    }
+    SUBSCRIPTION_PLAN {
+        int plan_id PK
+        string plan_name
+        decimal plan_price
+        string billing_period
+    }
+    SUBSCRIPTION {
+        int subscription_id PK
+        int customer_id FK
+        int plan_id FK
+        date start_date
+        date end_date
+        string subscription_status
+    }
+    PAYMENT {
+        int payment_id PK
+        int customer_id FK
+        int subscription_id FK
+        date payment_date
+        decimal amount
+        string payment_status
+    }
+    CONTENT {
+        int content_id PK
+        string title
+        string content_type
+        string genre
+        int duration_minutes
+    }
+    WATCH_HISTORY {
+        int watch_id PK
+        int customer_id FK
+        int content_id FK
+        datetime watch_start
+        int watch_duration_minutes
+        string device_type
+    }
+    MARKETING_CAMPAIGN {
+        int campaign_id PK
+        string campaign_name
+        string channel
+        decimal campaign_cost
+    }
+    CAMPAIGN_RESPONSE {
+        int response_id PK
+        int campaign_id FK
+        int customer_id FK
+        date response_date
+        string response_type
+        boolean converted
+    }
+    SUPPORT_AGENT {
+        int agent_id PK
+        string agent_name
+        string team
+    }
+    SUPPORT_TICKET {
+        int ticket_id PK
+        int customer_id FK
+        int agent_id FK
+        date created_date
+        date resolved_date
+        string issue_category
+        string ticket_status
+        string priority
+    }
+```
 
 ---
 
