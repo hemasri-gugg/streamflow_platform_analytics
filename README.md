@@ -375,12 +375,14 @@ StreamFlow-Platform-Analytics/
 │   ├─ marketing_analytics.sql
 │   └─ support_analytics.sql
 │
-├ 04_sql/
+├─ 05_sql/
 │   ├─ customer_analytics.sql
 │   ├─ revenue_analytics.sql
 │   ├─ content_analytics.sql
 │   ├─ marketing_analytics.sql
 │   └─ support_analytics.sql
+│
+├─ 06_insights/
 │
 ├─ LICENSE
 │
